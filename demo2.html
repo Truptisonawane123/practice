@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+div{
+left: 1200px;
+position : absolute;
+background-color: aqua;
+height: 90px;
+width:90px;
+margin:5;
+top:50px
+}
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<button id="fade" style= "float:right">fade</button>
+<button id="right" style= "float:right">animate</button>
+<div class="block" id="fd">HYE YOU SUT UP<p>this is the test</p></div>
+
+<script>
+/*$("#fade").click(function(){ $(".block").animate({opacity :0.3},{ duration :3000,queue:false });});*/
+$("#fade").click(function(){ $("#fd").fadeToggle("slow");
+$("#right").click(function(){ $(".block").animate({ "left" : "300" },"slow" ).animate({height : 600,width: 500,},{queue:false,duration:400}); });
+
+  
+});
+</script>
+
+</body>
+</html>
